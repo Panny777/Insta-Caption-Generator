@@ -58,13 +58,13 @@ form {
 
 input[type="text"] {
   padding: 12px 16px;
-  border: 1px solid #13bad4;
+  border: 1px solid #f07dcd;
   border-radius: 4px;
   margin-bottom: 24px;
 }
 
 ::placeholder {
-  color: #8e8ea0;
+  color: #7629f2;
   opacity: 1;
 }
 
@@ -72,7 +72,7 @@ button[type="submit"] {
   padding: 12px 0;
   font-size: 1.2em;
   color: #fff;
-  background-color: #13bad4;
+  background-color: #f07dcd;
   border: none;
   border-radius: 4px;
   text-align: center;

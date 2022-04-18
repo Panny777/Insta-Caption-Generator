@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <head>
-  <title>Tweet Generator</title>
+  <title>Caption Generator</title>
   <link
     rel="shortcut icon"
-    href="{{ url_for('static', filename='twitter-logo.png') }}"
+    href="{{ url_for('static', filename='insta-logo2.png') }}"
   />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-  
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}"
+  />
 </head>
 
 <body>
   <a href="/">
-    <img src="./static/twitter-logo.png" class="icon" />
+    <img src="./static/insta-logo2.png" class="icon" />
   </a>
 
-  <h3>Generate a Tweet</h3>
+  <h3>Insta Caption Generator</h3>
 
   <form action="/" method="post">
-    <input type="text" name="tweet" placeholder="Enter a topic" required />
-    <button id="submit-btn" type="submit" onclick="changeText()">Generate Tweet</button>
+    <input
+      type="text"
+      name="caption"
+      placeholder="Caption Description"
+      required
+      autocomplete="off"
+    />
+    <button id="submit-btn" type="submit" onclick="changeText()">
+      Generate Caption
+    </button>
   </form>
 
   {% if result %}
-  <div class="result">{{ result }}</div>
+  <div class="result">{{result}}</div>
   {% endif %}
-
 </body>
 
 <script type="text/javascript">
   function changeText() {
     var x = document.getElementById("submit-btn");
-    if (x.innerText == "Generate Tweet") {
+    if (x.innerText == "Generate Caption") {
       x.innerText = "Generating..";
     } else {
-      x.innerText = "Generate Tweet";
+      x.innerText = "Generate Caption";
     }
   }
 </script>
+
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename='js/script.js') }}"
+></script>
