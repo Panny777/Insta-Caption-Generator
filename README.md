@@ -1,4 +1,4 @@
-# OpenAI API Quickstart - Python example app
+# AI Instagram Caption Generator
 
 This is an Instagram Caption generator which uses AI to generate random Captions. It uses the [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework. Check out the tutorial or follow the instructions below to get set up.
 
