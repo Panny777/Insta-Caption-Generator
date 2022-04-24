@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Caption Generator</title>
+  <title>Insta Caption Generator</title>
   <link
     rel="shortcut icon"
     href="{{ url_for('static', filename='insta-logo2.png') }}"
@@ -36,11 +36,15 @@
   {% endif %}
 </body>
 
+<footer class="pt-xs-50 pt-md-60 pt-lg-95 pb-xs-50 pb-md-60 pb-lg-95 lazy" id="footer">
+  Made with ❤️ by Panny Tech
+</footer>
+
 <script type="text/javascript">
   function changeText() {
     var x = document.getElementById("submit-btn");
     if (x.innerText == "Generate Caption") {
-      x.innerText = "Generating..";
+      x.innerText = "Generating...";
     } else {
       x.innerText = "Generate Caption";
     }

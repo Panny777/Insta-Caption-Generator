@@ -11,7 +11,7 @@ This is an Instagram Caption generator which uses AI to generate random Captions
 3. Navigate into the project directory
 
    ```bash
-   $ cd openai-quickstart-python
+   $ Insta-Caption-Generator
    ```
 
 4. Create a new virtual environment

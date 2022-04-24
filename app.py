@@ -16,7 +16,15 @@ def index():
             temperature=0.6,
             max_tokens=100
         )
-        return redirect(url_for("index", result=response.choices[0].text))
+
+        hashtags = openai.Completion.create(
+            engine="text-davinci-002",
+            prompt=generate_hashtags(caption),
+            temperature=0.6,
+            max_tokens=100
+        )
+
+        return redirect(url_for("index", result=response.choices[0].text + "\n" +hashtags.choices[0].text))
 
     result = request.args.get("result")
     return render_template("index.html", result=result)
@@ -25,3 +33,7 @@ def index():
 def generate_prompt(caption):
     return """compose an instagram caption about
 """ + caption
+
+def generate_hashtags(caption):
+    return """generate three instagram hashtag about""" + caption
+
