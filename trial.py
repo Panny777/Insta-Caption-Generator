@@ -2,7 +2,7 @@
 
 import os
 import openai
-openai.api_key = "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"
+openai.api_key = ""
 openai.Completion.create(
   engine="text-davinci-002",
   prompt="Say this is a test",
